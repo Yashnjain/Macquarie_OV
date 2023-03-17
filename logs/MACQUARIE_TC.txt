@@ -1,0 +1,357 @@
+2023-03-06 14:43:18,677 [INFO] - process started
+2023-03-06 14:43:51,345 [INFO] - process started
+2023-03-06 14:43:51,346 [INFO] - Inside MACQUARIE_OV
+2023-03-06 14:43:58,153 [INFO] -  Engine Disposed ---- end
+2023-03-06 14:44:12,081 [INFO] - process started
+2023-03-06 14:44:14,318 [INFO] - Inside MACQUARIE_OV
+2023-03-06 19:25:47,928 [INFO] - process started
+2023-03-06 19:25:49,283 [INFO] - Inside MACQUARIE_OV
+2023-03-06 19:26:14,631 [ERROR] - Exception caught in download because: too many values to unpack (expected 2)
+Traceback (most recent call last):
+  File "c:\Users\Pakhi.laad\Macquarie_ov\fun2.py", line 30, in MACQUARIE_OV
+    for key,value in dic:
+ValueError: too many values to unpack (expected 2)
+2023-03-06 19:26:14,635 [ERROR] - Error occurred in . No such file or directory
+Traceback (most recent call last):
+  File "c:\Users\Pakhi.laad\Macquarie_ov\fun2.py", line 30, in MACQUARIE_OV
+    for key,value in dic:
+ValueError: too many values to unpack (expected 2)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Pakhi.laad\Macquarie_ov\fun2.py", line 62, in main
+    MACQUARIE_OV(date_file,fname)
+  File "c:\Users\Pakhi.laad\Macquarie_ov\fun2.py", line 54, in MACQUARIE_OV
+    raise Exception("No such file or directory")
+Exception: No such file or directory
+2023-03-06 19:26:26,791 [INFO] - process started
+2023-03-06 19:26:33,480 [INFO] - Inside MACQUARIE_OV
+2023-03-06 19:50:26,489 [INFO] - process started
+2023-03-06 19:51:52,173 [INFO] - Inside MACQUARIE_OV
+2023-03-06 20:07:06,843 [INFO] - process started
+2023-03-06 20:07:08,349 [INFO] - Inside MACQUARIE_OV
+2023-03-06 20:12:15,133 [INFO] - process started
+2023-03-06 20:12:17,480 [INFO] - Inside MACQUARIE_OV
+2023-03-06 20:47:30,339 [INFO] - process started
+2023-03-06 20:47:31,659 [INFO] - Inside MACQUARIE_OV
+2023-03-06 20:48:54,790 [INFO] - process started
+2023-03-06 20:48:56,934 [INFO] - Inside MACQUARIE_OV
+2023-03-06 20:50:01,402 [INFO] - process started
+2023-03-06 20:50:03,900 [INFO] - Inside MACQUARIE_OV
+2023-03-06 20:56:26,255 [ERROR] - Exception caught in download because: (-2146827864, 'OLE error 0x800a01a8', None, None)
+Traceback (most recent call last):
+  File "c:\Users\Pakhi.laad\Macquarie_ov\fun2.py", line 36, in MACQUARIE_OV
+    for sheet in wb.sheets:
+  File "C:\Users\Pakhi.laad\AppData\Roaming\Python\Python38\site-packages\xlwings\main.py", line 1404, in index
+    return self.impl.index
+  File "C:\Users\Pakhi.laad\AppData\Roaming\Python\Python38\site-packages\xlwings\_xlwindows.py", line 950, in index
+    return self.xl.Index
+  File "C:\Users\Pakhi.laad\AppData\Roaming\Python\Python38\site-packages\xlwings\_xlwindows.py", line 186, in __getattr__
+    v = getattr(self._inner, item)
+  File "C:\Users\Pakhi.laad\AppData\Roaming\Python\Python38\site-packages\win32com\client\__init__.py", line 583, in __getattr__
+    return self._ApplyTypes_(*args)
+  File "C:\Users\Pakhi.laad\AppData\Roaming\Python\Python38\site-packages\win32com\client\__init__.py", line 572, in _ApplyTypes_
+    self._oleobj_.InvokeTypes(dispid, 0, wFlags, retType, argTypes, *args),
+pywintypes.com_error: (-2146827864, 'OLE error 0x800a01a8', None, None)
+2023-03-06 20:56:26,259 [ERROR] - Error occurred in . No such file or directory
+Traceback (most recent call last):
+  File "c:\Users\Pakhi.laad\Macquarie_ov\fun2.py", line 36, in MACQUARIE_OV
+    for sheet in wb.sheets:
+  File "C:\Users\Pakhi.laad\AppData\Roaming\Python\Python38\site-packages\xlwings\main.py", line 1404, in index
+    return self.impl.index
+  File "C:\Users\Pakhi.laad\AppData\Roaming\Python\Python38\site-packages\xlwings\_xlwindows.py", line 950, in index
+    return self.xl.Index
+  File "C:\Users\Pakhi.laad\AppData\Roaming\Python\Python38\site-packages\xlwings\_xlwindows.py", line 186, in __getattr__
+    v = getattr(self._inner, item)
+  File "C:\Users\Pakhi.laad\AppData\Roaming\Python\Python38\site-packages\win32com\client\__init__.py", line 583, in __getattr__
+    return self._ApplyTypes_(*args)
+  File "C:\Users\Pakhi.laad\AppData\Roaming\Python\Python38\site-packages\win32com\client\__init__.py", line 572, in _ApplyTypes_
+    self._oleobj_.InvokeTypes(dispid, 0, wFlags, retType, argTypes, *args),
+pywintypes.com_error: (-2146827864, 'OLE error 0x800a01a8', None, None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Pakhi.laad\Macquarie_ov\fun2.py", line 64, in main
+    date_file = date_day_before.strftime("%m%d%Y")
+  File "c:\Users\Pakhi.laad\Macquarie_ov\fun2.py", line 56, in MACQUARIE_OV
+    return
+Exception: No such file or directory
+2023-03-06 20:56:37,119 [INFO] - process started
+2023-03-06 20:56:38,313 [INFO] - Inside MACQUARIE_OV
+2023-03-06 21:03:21,707 [INFO] - process started
+2023-03-06 21:03:23,012 [INFO] - Inside MACQUARIE_OV
+2023-03-06 21:03:49,552 [ERROR] - Exception caught in download because: invalid literal for int() with base 10: '    -163381.58'
+Traceback (most recent call last):
+  File "c:\Users\Pakhi.laad\Macquarie_ov\fun2.py", line 51, in MACQUARIE_OV
+    if(int(amount[i])>0):
+ValueError: invalid literal for int() with base 10: '    -163381.58'
+2023-03-06 21:03:49,553 [ERROR] - Error occurred in . No such file or directory
+Traceback (most recent call last):
+  File "c:\Users\Pakhi.laad\Macquarie_ov\fun2.py", line 51, in MACQUARIE_OV
+    if(int(amount[i])>0):
+ValueError: invalid literal for int() with base 10: '    -163381.58'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Pakhi.laad\Macquarie_ov\fun2.py", line 71, in main
+    MACQUARIE_OV(date_file,fname)
+  File "c:\Users\Pakhi.laad\Macquarie_ov\fun2.py", line 63, in MACQUARIE_OV
+    raise Exception("No such file or directory")
+Exception: No such file or directory
+2023-03-06 21:04:49,133 [INFO] - process started
+2023-03-06 21:04:50,471 [INFO] - Inside MACQUARIE_OV
+2023-03-06 21:05:18,525 [INFO] - process started
+2023-03-06 21:05:20,032 [INFO] - Inside MACQUARIE_OV
+2023-03-06 21:15:03,303 [INFO] - process started
+2023-03-06 21:15:14,079 [INFO] - Inside MACQUARIE_OV
+2023-03-07 12:38:35,910 [INFO] - process started
+2023-03-07 12:38:37,908 [INFO] - Inside MACQUARIE_OV
+2023-03-07 12:49:01,226 [INFO] - process started
+2023-03-07 12:49:04,054 [INFO] - Inside MACQUARIE_OV
+2023-03-07 18:03:18,766 [INFO] - process started
+2023-03-07 18:03:20,616 [INFO] - Inside MACQUARIE_OV
+2023-03-07 18:09:41,309 [ERROR] - Exception caught in download because: 'Sold Quantity'
+Traceback (most recent call last):
+  File "C:\Users\Pakhi.laad\AppData\Roaming\Python\Python38\site-packages\pandas\core\indexes\base.py", line 3621, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 136, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 163, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5198, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5206, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Sold Quantity'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Pakhi.laad\Macquarie_ov\fun2.py", line 35, in MACQUARIE_OV
+    sold_quantity = value['Sold Quantity']
+  File "C:\Users\Pakhi.laad\AppData\Roaming\Python\Python38\site-packages\pandas\core\frame.py", line 3505, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\Pakhi.laad\AppData\Roaming\Python\Python38\site-packages\pandas\core\indexes\base.py", line 3623, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Sold Quantity'
+2023-03-07 18:09:41,316 [ERROR] - Error occurred in . No such file or directory
+Traceback (most recent call last):
+  File "C:\Users\Pakhi.laad\AppData\Roaming\Python\Python38\site-packages\pandas\core\indexes\base.py", line 3621, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 136, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 163, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5198, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5206, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Sold Quantity'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Pakhi.laad\Macquarie_ov\fun2.py", line 35, in MACQUARIE_OV
+    sold_quantity = value['Sold Quantity']
+  File "C:\Users\Pakhi.laad\AppData\Roaming\Python\Python38\site-packages\pandas\core\frame.py", line 3505, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\Pakhi.laad\AppData\Roaming\Python\Python38\site-packages\pandas\core\indexes\base.py", line 3623, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Sold Quantity'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Pakhi.laad\Macquarie_ov\fun2.py", line 108, in main
+    MACQUARIE_OV(date_file,fname)
+  File "c:\Users\Pakhi.laad\Macquarie_ov\fun2.py", line 100, in MACQUARIE_OV
+    raise Exception("No such file or directory")
+Exception: No such file or directory
+2023-03-07 18:09:56,830 [INFO] - process started
+2023-03-07 18:09:58,430 [INFO] - Inside MACQUARIE_OV
+2023-03-07 18:10:03,922 [ERROR] - Exception caught in download because: 'Sold Quantity'
+Traceback (most recent call last):
+  File "C:\Users\Pakhi.laad\AppData\Roaming\Python\Python38\site-packages\pandas\core\indexes\base.py", line 3621, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 136, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 163, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5198, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5206, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Sold Quantity'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Pakhi.laad\Macquarie_ov\fun2.py", line 35, in MACQUARIE_OV
+    sold_quantity = value['Sold Quantity']
+  File "C:\Users\Pakhi.laad\AppData\Roaming\Python\Python38\site-packages\pandas\core\frame.py", line 3505, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\Pakhi.laad\AppData\Roaming\Python\Python38\site-packages\pandas\core\indexes\base.py", line 3623, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Sold Quantity'
+2023-03-07 18:10:03,928 [ERROR] - Error occurred in . No such file or directory
+Traceback (most recent call last):
+  File "C:\Users\Pakhi.laad\AppData\Roaming\Python\Python38\site-packages\pandas\core\indexes\base.py", line 3621, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 136, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 163, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5198, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5206, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Sold Quantity'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Pakhi.laad\Macquarie_ov\fun2.py", line 35, in MACQUARIE_OV
+    sold_quantity = value['Sold Quantity']
+  File "C:\Users\Pakhi.laad\AppData\Roaming\Python\Python38\site-packages\pandas\core\frame.py", line 3505, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\Pakhi.laad\AppData\Roaming\Python\Python38\site-packages\pandas\core\indexes\base.py", line 3623, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Sold Quantity'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Pakhi.laad\Macquarie_ov\fun2.py", line 108, in main
+    MACQUARIE_OV(date_file,fname)
+  File "c:\Users\Pakhi.laad\Macquarie_ov\fun2.py", line 100, in MACQUARIE_OV
+    raise Exception("No such file or directory")
+Exception: No such file or directory
+2023-03-07 18:10:49,580 [INFO] - process started
+2023-03-07 18:10:53,808 [INFO] - Inside MACQUARIE_OV
+2023-03-07 18:11:02,675 [ERROR] - Exception caught in download because: 'Sold Quantity'
+Traceback (most recent call last):
+  File "C:\Users\Pakhi.laad\AppData\Roaming\Python\Python38\site-packages\pandas\core\indexes\base.py", line 3621, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 136, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 163, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5198, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5206, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Sold Quantity'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Pakhi.laad\Macquarie_ov\fun2.py", line 35, in MACQUARIE_OV
+    sold_quantity = value['Sold Quantity']
+  File "C:\Users\Pakhi.laad\AppData\Roaming\Python\Python38\site-packages\pandas\core\frame.py", line 3505, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\Pakhi.laad\AppData\Roaming\Python\Python38\site-packages\pandas\core\indexes\base.py", line 3623, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Sold Quantity'
+2023-03-07 18:11:02,681 [ERROR] - Error occurred in . No such file or directory
+Traceback (most recent call last):
+  File "C:\Users\Pakhi.laad\AppData\Roaming\Python\Python38\site-packages\pandas\core\indexes\base.py", line 3621, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 136, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 163, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5198, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5206, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Sold Quantity'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Pakhi.laad\Macquarie_ov\fun2.py", line 35, in MACQUARIE_OV
+    sold_quantity = value['Sold Quantity']
+  File "C:\Users\Pakhi.laad\AppData\Roaming\Python\Python38\site-packages\pandas\core\frame.py", line 3505, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\Pakhi.laad\AppData\Roaming\Python\Python38\site-packages\pandas\core\indexes\base.py", line 3623, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Sold Quantity'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Pakhi.laad\Macquarie_ov\fun2.py", line 108, in main
+    MACQUARIE_OV(date_file,fname)
+  File "c:\Users\Pakhi.laad\Macquarie_ov\fun2.py", line 100, in MACQUARIE_OV
+    raise Exception("No such file or directory")
+Exception: No such file or directory
+2023-03-07 18:11:16,410 [INFO] - process started
+2023-03-07 18:11:17,805 [INFO] - Inside MACQUARIE_OV
+2023-03-07 18:12:32,986 [INFO] - process started
+2023-03-07 18:12:33,994 [INFO] - Inside MACQUARIE_OV
+2023-03-07 18:21:55,547 [INFO] - process started
+2023-03-07 18:22:00,682 [INFO] - Inside MACQUARIE_OV
+2023-03-07 18:23:40,901 [INFO] - process started
+2023-03-07 18:23:44,019 [INFO] - Inside MACQUARIE_OV
+2023-03-07 19:49:30,150 [INFO] - process started
+2023-03-07 19:49:32,485 [INFO] - Inside MACQUARIE_OV
+2023-03-07 19:58:30,430 [INFO] - process started
+2023-03-07 19:58:33,249 [INFO] - Inside MACQUARIE_OV
+2023-03-07 20:05:50,480 [INFO] - process started
+2023-03-07 20:05:51,970 [INFO] - Inside MACQUARIE_OV
+2023-03-07 20:06:29,508 [INFO] - process started
+2023-03-07 20:06:30,809 [INFO] - Inside MACQUARIE_OV
+2023-03-07 20:07:13,032 [INFO] - process started
+2023-03-07 20:07:20,163 [INFO] - Inside MACQUARIE_OV
+2023-03-07 20:10:27,961 [INFO] - process started
+2023-03-07 20:10:30,874 [INFO] - Inside MACQUARIE_OV
+2023-03-07 20:16:56,618 [INFO] - process started
+2023-03-07 20:19:09,506 [INFO] - Inside MACQUARIE_OV
+2023-03-07 20:21:28,482 [INFO] - process started
+2023-03-07 20:21:30,778 [INFO] - Inside MACQUARIE_OV
+2023-03-07 20:32:33,035 [INFO] - process started
+2023-03-07 20:32:35,043 [INFO] - Inside MACQUARIE_OV
+2023-03-07 20:40:11,840 [INFO] - process started
+2023-03-07 20:40:16,107 [INFO] - Inside MACQUARIE_OV
+2023-03-09 12:29:56,542 [INFO] - process started
+2023-03-09 12:30:03,564 [INFO] - Inside MACQUARIE_OV
+2023-03-09 12:54:10,732 [INFO] - process started
+2023-03-09 12:54:13,065 [INFO] - Inside MACQUARIE_OV
+2023-03-09 12:57:15,146 [INFO] - process started
+2023-03-09 12:59:06,920 [INFO] - process started
+2023-03-09 13:06:19,471 [INFO] - Inside MACQUARIE_OV
+2023-03-09 13:08:00,504 [INFO] - process started
+2023-03-09 13:08:01,831 [INFO] - Inside MACQUARIE_OV
+2023-03-09 13:18:18,842 [INFO] - process started
+2023-03-09 13:18:20,586 [INFO] - Inside MACQUARIE_OV
+2023-03-09 13:21:23,961 [INFO] - process started
+2023-03-09 13:21:25,252 [INFO] - Inside MACQUARIE_OV
+2023-03-09 13:26:12,415 [INFO] - process started
+2023-03-09 13:26:27,251 [INFO] - Inside MACQUARIE_OV
+2023-03-09 15:26:42,110 [INFO] - process started
+2023-03-09 15:26:43,534 [INFO] - Inside MACQUARIE_OV
+2023-03-10 12:54:27,441 [INFO] - process started
+2023-03-10 12:54:29,410 [INFO] - Inside MACQUARIE_OV
+2023-03-10 16:25:48,403 [INFO] - process started
+2023-03-10 16:25:50,455 [INFO] - Inside MACQUARIE_OV
+2023-03-10 16:25:50,766 [INFO] -  Engine Disposed ---- end
+2023-03-10 16:26:11,871 [INFO] - process started
+2023-03-10 16:26:13,188 [INFO] - Inside MACQUARIE_OV
+2023-03-10 16:26:13,496 [INFO] -  Engine Disposed ---- end
+2023-03-10 16:26:36,562 [INFO] - process started
+2023-03-10 16:26:37,726 [INFO] - Inside MACQUARIE_OV
+2023-03-10 16:27:28,928 [INFO] - process started
+2023-03-10 16:27:45,776 [INFO] - Inside MACQUARIE_OV
+2023-03-10 16:30:21,048 [INFO] - process started
+2023-03-10 16:30:22,262 [INFO] - Inside MACQUARIE_OV
+2023-03-10 16:45:33,020 [INFO] - process started
+2023-03-10 16:45:34,729 [INFO] - Inside MACQUARIE_OV
+2023-03-10 16:58:56,943 [INFO] - process started
+2023-03-10 16:58:58,902 [INFO] - Inside MACQUARIE_OV
+2023-03-10 18:50:04,666 [INFO] - process started
+2023-03-10 18:50:08,582 [INFO] - Inside MACQUARIE_OV
+2023-03-13 13:54:26,654 [INFO] - process started
+2023-03-13 13:54:29,355 [INFO] - Inside MACQUARIE_OV
+2023-03-13 13:54:53,715 [INFO] - process started
+2023-03-13 13:54:55,143 [INFO] - Inside MACQUARIE_OV
+2023-03-13 14:37:49,902 [INFO] - process started
+2023-03-13 14:37:52,275 [INFO] - Inside MACQUARIE_OV
+2023-03-13 14:40:42,265 [INFO] - process started
+2023-03-13 14:40:47,928 [INFO] - Inside MACQUARIE_OV
+2023-03-13 14:46:42,373 [INFO] - process started
+2023-03-13 14:46:44,109 [INFO] - Inside MACQUARIE_OV
+2023-03-13 15:08:51,496 [INFO] - process started
+2023-03-13 15:09:24,077 [INFO] - Inside MACQUARIE_OV
+2023-03-13 15:10:31,389 [INFO] - process started
+2023-03-13 15:10:33,184 [INFO] - Inside MACQUARIE_OV
+2023-03-13 15:12:24,438 [INFO] - process started
+2023-03-13 15:12:27,167 [INFO] - Inside MACQUARIE_OV
+2023-03-13 15:13:50,174 [INFO] - process started
+2023-03-13 15:13:55,413 [INFO] - Inside MACQUARIE_OV
+2023-03-13 15:16:01,018 [INFO] - process started
+2023-03-13 15:16:02,974 [INFO] - Inside MACQUARIE_OV
+2023-03-13 15:19:48,545 [INFO] - process started
+2023-03-13 15:19:53,382 [INFO] - Inside MACQUARIE_OV
+2023-03-13 15:33:10,837 [INFO] - process started
+2023-03-13 15:33:12,361 [INFO] - Inside MACQUARIE_OV
+2023-03-13 15:35:47,276 [INFO] - process started
+2023-03-13 15:35:48,472 [INFO] - Inside MACQUARIE_OV
