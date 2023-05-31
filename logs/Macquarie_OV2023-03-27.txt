@@ -1,0 +1,30 @@
+2023-03-27 14:50:30,615 [INFO] - process started
+2023-03-27 14:50:34,456 [INFO] - Calling Macquarie_ov
+2023-03-27 14:50:36,267 [INFO] - Inside MACQUARIE_OV
+2023-03-27 14:50:40,681 [INFO] -  Engine Disposed ---- end
+2023-03-27 14:53:14,751 [INFO] - process started
+2023-03-27 14:53:14,751 [INFO] - Calling Macquarie_ov
+2023-03-27 14:53:14,751 [INFO] - Inside MACQUARIE_OV
+2023-03-27 14:53:45,610 [INFO] - Dataframe made from TC file
+2023-03-27 14:53:49,019 [INFO] - File loaded in workbook
+2023-03-27 14:53:50,400 [INFO] - data went for first sheet
+2023-03-27 14:53:50,436 [INFO] - sheet activated for Bulk-434
+2023-03-27 14:53:54,016 [INFO] - sheet activated for Power-436
+2023-03-27 14:53:55,309 [INFO] - sheet activated for Power-437
+2023-03-27 14:53:55,783 [INFO] - sheet activated for Spread-440
+2023-03-27 14:53:57,553 [INFO] - sheet activated for Center-442
+2023-03-27 14:53:59,160 [INFO] - sheet activated for Center-443
+2023-03-27 14:54:02,228 [INFO] - sheet activated for Center-444
+2023-03-27 14:54:02,523 [INFO] - sheet activated for Power-448
+2023-03-27 14:54:20,342 [INFO] - Save changes to workbook
+2023-03-27 14:54:25,726 [INFO] - Closed workbook
+2023-03-27 14:54:25,727 [INFO] -  Engine Disposed ---- end
+2023-03-27 14:54:25,739 [INFO] - Snowflake Connector for Python Version: 2.7.9, Python Version: 3.8.5, Platform: Windows-10-10.0.19041-SP0
+2023-03-27 14:54:25,743 [INFO] - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+2023-03-27 14:54:25,743 [INFO] - Setting use_openssl_only mode to False
+2023-03-27 14:54:29,834 [INFO] - query: [SELECT 1]
+2023-03-27 14:54:30,119 [INFO] - query execution done
+2023-03-27 14:54:30,138 [INFO] - query: [select * from POWERDB.PLOG.BU_CONFIG_PARAMS where PROJECT_NAME = 'BU_ALERTS' and...]
+2023-03-27 14:54:30,409 [INFO] - query execution done
+2023-03-27 14:54:30,428 [INFO] - closed
+2023-03-27 14:54:30,669 [INFO] - No async queries seem to be running, deleting session

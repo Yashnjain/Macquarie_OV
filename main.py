@@ -16,9 +16,10 @@ def MACQUARIE_OV(date,fname):
         loc = f'S:\Position Report\MBL Statement Recon\Source\{date}\{fname}'
         df  = pd.read_csv(os.path.join(loc,'TC'+fname+'.csv'))
         dic = {'52311430' : 'sheet1','52311431': [34,'WC-431'],'52311432': [23,'GC-432'],'52311433': [18,'Power-433'],'52311434': [35,'Bulk-434'],'52311435': [14,'Power-435'],\
-                '52311436': [30,'Power-436'],'52311437': [14,'Power-437'],'52311439': [15,'Spread-439'],'52311440': [42,'Spread-440'],'52311441': [16,'NG-441'],\
+                '52311436': [30,'Power-436'],'52311437': [14,'Power-437'],'52311438': [14,'Power-438'],'52311439': [15,'Spread-439'],'52311440': [42,'Spread-440'],'52311441': [16,'NG-441'],\
                 '52311442': [27,'Center-442'],'52311443': [20,'Center-443'],'52311444': [24,'Center-444'], '52311445': [57,'Power-445'],'52311446': [33,'Power-446'],'52311448': [33,'Power-448']}
         logging.info('Dataframe made from TC file')
+        # dic_list = list(dic.items())[11:]
         today = datetime.now()
         year = time.strftime("%Y")
         month = time.strftime("%m")
@@ -40,13 +41,16 @@ def MACQUARIE_OV(date,fname):
             os.rename(pre_filename,filename)
         wb = xw.Book(filename)
         logging.info('File loaded in workbook')
+        time.sleep(5)
         for key,value in dic.items():
+        # for key,value in dic_list:
             val = df[df["Client code"] ==  int(key)].reset_index()
             if(val.empty):
                     continue
             else:
-                val['Input Date'] = pd.to_datetime(val['Input Date'])
+                val['Input Date'] = val['Input Date'].apply(lambda x: datetime.strptime(x,"%d/%m/%y"))
                 Input_Date = val['Input Date'] 
+                trade_date = val['Trade Date']
                 amount = val['Settlement Amount']
                 bought_quantity = val['Bought Quantity']
                 sold_quantity = val['Sold  Quantity']
@@ -60,10 +64,12 @@ def MACQUARIE_OV(date,fname):
                 if key == '52311430':
                     sheet = wb.sheets["Margin-430"]
                     last_row = sheet.range('A' + str(sheet.cells.last_cell.row)).end('up').row
+                    # sheet.range(f'A3:A{last_row}').value
                     sheet.range(f"A{last_row+1}").api.EntireRow.Insert()
                     time.sleep(1)     
                             #inserting Date in A column last row
                     for i in range(len(val)):
+                        #two line space between final month entrty and current entry
                         sheet.range(f'A{last_row-2}').api.EntireRow.Insert()
                         sheet.range(f"A{last_row-2}").value = Input_Date[i].strftime("%m-%d-%Y")
                         sheet.range(f"Y{last_row-2}").value = amount[i]
@@ -85,12 +91,14 @@ def MACQUARIE_OV(date,fname):
                             fees[i] = fees[i].replace(" ","")
                             clr_comm[i] = clr_comm[i].replace(" ","")
                             NFA_Fees[i] = NFA_Fees[i].replace(" ","")
+                            trade_date[i] = trade_date[i].replace(" ","")
                             exec_comm_val = float(exec_comm[i]) if exec_comm[i] else 0.0
                             fees_val = float(fees[i]) if fees[i] else 0.0
                             clr_comm_val = float(clr_comm[i]) if clr_comm[i] else 0.0
                             NFA_Fees_val = float(NFA_Fees[i]) if NFA_Fees[i] else 0.0
                             total_fee = exec_comm_val + fees_val + clr_comm_val + NFA_Fees_val
                             try:
+                                #one line space between final month entrty and current entry
                                 last_row = sheet.range('A' + str(sheet.cells.last_cell.row)).end('up').end('up').end('up').end('up').row
                                 pre_date = sheet.range('A' + str(last_row)).value
                                 pre_month = pre_date.strftime("%m")
@@ -105,8 +113,12 @@ def MACQUARIE_OV(date,fname):
                                 sheet.range(f"A{last_row+1}").api.EntireRow.Insert()
                                 sheet.range(f"A{last_row+1}").value = Input_Date[i].strftime("%m-%d-%Y")
                                 amount[i] = amount[i].replace(" ","")
-                            
-                                if(bought_quantity[i] == ''):
+
+                                if(trade_date[i] == '' and bought_quantity[i] == '' and sold_quantity[i] == ''):
+                                    sheet.range(f"B{last_row+1}").value = 'COMMISSION ADJUSTMENTS'
+                                    sheet.range(f"I{last_row+1}").value = amount[i]
+                                
+                                elif(bought_quantity[i] == ''):
                                             sheet.range(f"K{last_row+1}").value = desc[i]
                                             sheet.range(f"L{last_row+1}").value = sold_quantity[i]
                                             sheet.range(f"M{last_row+1}").value = sold_price[i]
@@ -121,6 +133,7 @@ def MACQUARIE_OV(date,fname):
                                             sheet.range(f"I{last_row+1}").value = total_fee
                                             sheet.range(f"W{last_row+1}").value = amount[i]
                                             sheet.range(f"AB{last_row+1}").formula = f'=AB{last_row-1}+I{last_row}+N{last_row}+W{last_row}+Y{last_row}'
+                                
                             continue
         wb.save()
         logging.info('Save changes to workbook')

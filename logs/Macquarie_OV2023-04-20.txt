@@ -1,0 +1,32 @@
+2023-04-20 14:56:54,472 [INFO] - process started
+2023-04-20 14:56:59,033 [INFO] - Calling Macquarie_ov
+2023-04-20 14:56:59,591 [INFO] - Inside MACQUARIE_OV
+2023-04-20 14:57:56,943 [INFO] - process started
+2023-04-20 14:57:58,915 [INFO] - Calling Macquarie_ov
+2023-04-20 14:57:58,916 [INFO] - Inside MACQUARIE_OV
+2023-04-20 15:02:17,058 [INFO] - Dataframe made from TC file
+2023-04-20 15:08:59,716 [INFO] - File loaded in workbook
+2023-04-20 15:12:30,694 [INFO] - process started
+2023-04-20 15:12:34,866 [INFO] - Calling Macquarie_ov
+2023-04-20 15:12:34,866 [INFO] - Inside MACQUARIE_OV
+2023-04-20 15:12:46,091 [INFO] - Dataframe made from TC file
+2023-04-20 15:13:25,043 [INFO] - process started
+2023-04-20 15:13:26,905 [INFO] - Calling Macquarie_ov
+2023-04-20 15:13:26,905 [INFO] - Inside MACQUARIE_OV
+2023-04-20 15:13:33,141 [INFO] - Dataframe made from TC file
+2023-04-20 15:13:56,216 [INFO] - File loaded in workbook
+2023-04-20 17:22:58,601 [INFO] - process started
+2023-04-20 17:23:01,626 [INFO] - Calling Macquarie_ov
+2023-04-20 17:23:01,627 [INFO] - Inside MACQUARIE_OV
+2023-04-20 17:24:17,820 [INFO] - Dataframe made from TC file
+2023-04-20 17:25:31,682 [INFO] - process started
+2023-04-20 17:25:37,925 [INFO] - Calling Macquarie_ov
+2023-04-20 17:25:37,926 [INFO] - Inside MACQUARIE_OV
+2023-04-20 17:25:53,112 [INFO] - Dataframe made from TC file
+2023-04-20 17:27:19,807 [INFO] - File loaded in workbook
+2023-04-20 17:29:08,908 [INFO] - process started
+2023-04-20 17:29:10,560 [INFO] - Calling Macquarie_ov
+2023-04-20 17:29:10,560 [INFO] - Inside MACQUARIE_OV
+2023-04-20 17:29:17,919 [INFO] - Dataframe made from TC file
+2023-04-20 17:29:30,564 [INFO] - File loaded in workbook
+2023-04-20 17:31:52,936 [INFO] - sheet activated for h
