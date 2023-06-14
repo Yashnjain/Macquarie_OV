@@ -1,0 +1,33 @@
+2023-06-01 15:38:08,170 [INFO] - process started
+2023-06-01 15:38:23,413 [INFO] - Calling Macquarie_ov
+2023-06-01 15:38:27,267 [INFO] - Inside MACQUARIE_OV
+2023-06-01 15:39:19,390 [INFO] - Dataframe made from TC file
+2023-06-01 15:40:47,263 [INFO] -  New month : File not found making new File
+2023-06-01 16:37:19,573 [INFO] - process started
+2023-06-01 16:37:23,742 [INFO] - Calling Macquarie_ov
+2023-06-01 16:37:27,922 [INFO] - Inside MACQUARIE_OV
+2023-06-01 16:37:44,354 [INFO] - Dataframe made from TC file
+2023-06-01 16:37:50,278 [INFO] -  New month : Folder not found making new Folder
+2023-06-01 16:38:04,335 [INFO] -  New month : File not found making new File
+2023-06-01 16:39:32,571 [INFO] - process started
+2023-06-01 16:39:35,062 [INFO] - Calling Macquarie_ov
+2023-06-01 16:39:37,635 [INFO] - Inside MACQUARIE_OV
+2023-06-01 16:39:50,462 [INFO] - Dataframe made from TC file
+2023-06-01 16:39:57,197 [INFO] -  New month : Folder not found making new Folder
+2023-06-01 16:40:06,077 [INFO] -  New month : File not found making new File
+2023-06-01 17:33:01,346 [INFO] - process started
+2023-06-01 17:33:04,533 [INFO] - Calling Macquarie_ov
+2023-06-01 17:33:04,534 [INFO] - Inside MACQUARIE_OV
+2023-06-01 17:33:26,010 [INFO] - Dataframe made from TC file
+2023-06-01 17:36:44,603 [INFO] - File loaded in workbook
+2023-06-01 17:41:37,569 [INFO] - data went for first sheet
+2023-06-01 17:41:56,007 [INFO] - sheet activated for WC-431
+2023-06-01 17:42:02,508 [INFO] - sheet activated for Bulk-434
+2023-06-01 17:42:06,532 [INFO] - sheet activated for Power-435
+2023-06-01 17:42:08,958 [INFO] - sheet activated for Power-436
+2023-06-01 17:42:11,476 [INFO] - sheet activated for Power-437
+2023-06-01 17:42:15,333 [INFO] - sheet activated for Spread-440
+2023-06-01 17:42:21,110 [INFO] - sheet activated for Center-442
+2023-06-01 17:42:26,369 [INFO] - sheet activated for Center-443
+2023-06-01 17:42:31,220 [INFO] - sheet activated for Center-444
+2023-06-01 17:42:34,113 [INFO] - sheet activated for Power-448

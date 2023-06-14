@@ -1,5 +1,6 @@
 import xlwings as xw
 import shutil    
+import datetime
 from datetime import datetime,timedelta,date
 import numpy as np
 import pandas as pd
@@ -15,17 +16,17 @@ def MACQUARIE_OV(date,fname):
         logging.info('Inside MACQUARIE_OV')
         loc = f'S:\Position Report\MBL Statement Recon\Source\{date}\{fname}'
         df  = pd.read_csv(os.path.join(loc,'TC'+fname+'.csv'))
-        dic = {'52311430' : 'sheet1','52311431': [34,'WC-431'],'52311432': [23,'GC-432'],'52311433': [18,'Power-433'],'52311434': [35,'Bulk-434'],'52311435': [14,'Power-435'],\
+        dic = {'52311430' : 'sheet1','52311431': [34,'WC-431'],'52311432': [23,'Power-432'],'52311433': [18,'Power-433'],'52311434': [35,'Bulk-434'],'52311435': [14,'Power-435'],\
                 '52311436': [30,'Power-436'],'52311437': [14,'Power-437'],'52311438': [14,'Power-438'],'52311439': [15,'Spread-439'],'52311440': [42,'Spread-440'],'52311441': [16,'NG-441'],\
                 '52311442': [27,'Center-442'],'52311443': [20,'Center-443'],'52311444': [24,'Center-444'], '52311445': [57,'Power-445'],'52311446': [33,'Power-446'],'52311448': [33,'Power-448']}
         logging.info('Dataframe made from TC file')
         # dic_list = list(dic.items())[11:]
-        today = datetime.now()
-        year = time.strftime("%Y")
-        month = time.strftime("%m")
+        daybefore= datetime.now() - timedelta(days =1)
+        year = daybefore.year
+        month = daybefore.month
         days_in_month = str(calendar.monthrange(int(year), int(month))[1])
-        folder_name = inputloc + '\\' + today.strftime("%Y%m") + '\\Test'
-        filename = folder_name + '\\'+'MBL-'+ today.strftime("%Y%m")+days_in_month+'.xlsx'
+        folder_name = inputloc + '\\' + daybefore.strftime("%Y%m") + '\\Test'
+        filename = folder_name + '\\'+'MBL-'+ daybefore.strftime("%Y%m")+ days_in_month+'.xlsx'
         if not os.path.exists(folder_name):
             logging.info(' New month : Folder not found making new Folder')
             os.makedirs(folder_name)
@@ -36,9 +37,50 @@ def MACQUARIE_OV(date,fname):
             month = yesterday.strftime("%m")
             days_in_month = str(calendar.monthrange(int(year), int(month))[1])
             pre_folder_name = inputloc + '\\' + yesterday.strftime("%Y%m")
-            pre_filename = pre_folder_name +'\\'+'MBL-'+ today.strftime("%Y%m")+days_in_month+'.xlsx'
+            pre_filename = pre_folder_name +'\\Test\\'+'MBL-'+ yesterday.strftime("%Y%m")+days_in_month+'.xlsx'
+            copied_file_name = folder_name +'\\'+ 'MBL-'+ yesterday.strftime("%Y%m")+days_in_month+'.xlsx'
             shutil.copy(pre_filename, folder_name)
-            os.rename(pre_filename,filename)
+            os.rename(copied_file_name,filename)
+            wb = xw.Book(filename)
+            for key,value in dic.items():
+                if key == '52311430':
+                    sheet = wb.sheets['Margin-430']
+                    last_row = sheet.range('A' + str(sheet.cells.last_cell.row)).end('up').row
+                    sec_last_row = sheet.range('A' + str(sheet.cells.last_cell.row)).end('up').end('up').row
+                    lines_to_copy = sheet.range(f'A{sec_last_row+1}:AB{last_row}').value
+                    sheet.range(f'A{last_row+1}').value = lines_to_copy
+                    last_row = sheet.range('A' + str(sheet.cells.last_cell.row)).end('up').row
+                    current_date = datetime.now()
+                    next_month = current_date.month + 1 if current_date.month < 12 else 1
+                    next_year = current_date.year + 1 if current_date.month == 12 else current_date.year
+                    first_day_next_month = datetime(next_year, next_month, 1)
+                    next_month_date = first_day_next_month.strftime("%m-%d-%Y")
+                    sheet.range(f"A{last_row}").value = next_month_date
+                else:
+                    sheet = wb.sheets[value[1]]
+                    sheet.activate()
+                    try:
+                        last_row = sheet.range('A' + str(sheet.cells.last_cell.row)).end('up').row
+                        sec_last_row = sheet.range('A' + str(sheet.cells.last_cell.row)).end('up').end('up').end('up').end('up').row
+                        lines_to_copy = sheet.range(f'A{sec_last_row+1}:AB{last_row}').value
+                    except AttributeError:
+                        last_row = sheet.range('A' + str(sheet.cells.last_cell.row)).end('up').row
+                        sec_last_row = sheet.range('A' + str(sheet.cells.last_cell.row)).end('up').end('up').end('up').end('up').end('up').end('up').row
+                        lines_to_copy = sheet.range(f'A{sec_last_row+1}:AB{last_row}').value
+                    sheet.range(f'A{last_row+1}').value = lines_to_copy
+                    last_row = sheet.range('A' + str(sheet.cells.last_cell.row)).end('up').row
+                    current_date = datetime.now()
+                    next_month = current_date.month + 1 if current_date.month < 12 else 1
+                    next_year = current_date.year + 1 if current_date.month == 12 else current_date.year
+                    first_day_next_month = datetime(next_year, next_month, 1)
+                    next_month_date = first_day_next_month.strftime("%m-%d-%Y")
+                    sheet.range(f"A{last_row}").value = next_month_date
+                
+                continue
+
+            wb.save()
+            logging.info('Save changes to workbook')
+            wb.close()
         wb = xw.Book(filename)
         logging.info('File loaded in workbook')
         time.sleep(5)
@@ -64,7 +106,6 @@ def MACQUARIE_OV(date,fname):
                 if key == '52311430':
                     sheet = wb.sheets["Margin-430"]
                     last_row = sheet.range('A' + str(sheet.cells.last_cell.row)).end('up').row
-                    # sheet.range(f'A3:A{last_row}').value
                     sheet.range(f"A{last_row+1}").api.EntireRow.Insert()
                     time.sleep(1)     
                             #inserting Date in A column last row
@@ -102,12 +143,12 @@ def MACQUARIE_OV(date,fname):
                                 last_row = sheet.range('A' + str(sheet.cells.last_cell.row)).end('up').end('up').end('up').end('up').row
                                 pre_date = sheet.range('A' + str(last_row)).value
                                 pre_month = pre_date.strftime("%m")
-                                curr_month = datetime.now().strftime("%m")
+                                curr_month = daybefore.strftime("%m")
                             except AttributeError:
                                 last_row = sheet.range('A' + str(sheet.cells.last_cell.row)).end('up').end('up').end('up').end('up').end('up').end('up').row
                                 pre_date = sheet.range('A' + str(last_row)).value
                                 pre_month = pre_date.strftime("%m")
-                                curr_month = datetime.now().strftime("%m")
+                                curr_month = daybefore.strftime("%m")
                             if (pre_month == curr_month):
                                 bought_quantity[i] = bought_quantity[i].replace(" ","")
                                 sheet.range(f"A{last_row+1}").api.EntireRow.Insert()
