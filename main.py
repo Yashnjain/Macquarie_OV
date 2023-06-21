@@ -133,6 +133,8 @@ def MACQUARIE_OV(date,fname):
                             clr_comm[i] = clr_comm[i].replace(" ","")
                             NFA_Fees[i] = NFA_Fees[i].replace(" ","")
                             trade_date[i] = trade_date[i].replace(" ","")
+                            bought_quantity[i] = bought_quantity[i].replace(" ","")
+                            sold_quantity[i] = sold_quantity[i].replace(" ","")
                             exec_comm_val = float(exec_comm[i]) if exec_comm[i] else 0.0
                             fees_val = float(fees[i]) if fees[i] else 0.0
                             clr_comm_val = float(clr_comm[i]) if clr_comm[i] else 0.0
@@ -161,7 +163,7 @@ def MACQUARIE_OV(date,fname):
                                 
                                 elif(bought_quantity[i] == ''):
                                             sheet.range(f"K{last_row+1}").value = desc[i]
-                                            sheet.range(f"L{last_row+1}").value = sold_quantity[i]
+                                            sheet.range(f"L{last_row+1}").value = '-' + sold_quantity[i]
                                             sheet.range(f"M{last_row+1}").value = sold_price[i]
                                             sheet.range(f"N{last_row+1}").value = total_fee
                                             sheet.range(f"W{last_row+1}").value = amount[i]
@@ -189,7 +191,7 @@ def MACQUARIE_OV(date,fname):
 def main():
     try:
         logging.info('process started')
-        date_day_before= datetime.now() - timedelta(1)
+        date_day_before= datetime.now() - timedelta(6)
         date_file = date_day_before.strftime("%m%d%Y")
         fname = date_day_before.strftime("%d%m") + 'F'
         log_json='[{"JOB_ID": "'+str(job_id)+'","CURRENT_DATETIME": "'+str(datetime.now())+'"}]'
@@ -210,10 +212,6 @@ def main():
                             mail_subject=f"JOB FAILED ::  MACQUARIE OTHER_VERTICAL",
                             mail_body=f"{e}",
                             attachment_location = log_file_location)
-
-
-
-
 
 
 

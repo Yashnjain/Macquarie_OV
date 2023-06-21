@@ -1,0 +1,36 @@
+2023-06-15 12:27:55,752 [INFO] - process started
+2023-06-15 12:27:57,615 [INFO] - Calling Macquarie_ov
+2023-06-15 12:27:57,615 [INFO] - Inside MACQUARIE_OV
+2023-06-15 12:27:59,864 [INFO] - Dataframe made from TC file
+2023-06-15 12:28:13,201 [INFO] - File loaded in workbook
+2023-06-15 12:29:24,110 [INFO] - process started
+2023-06-15 12:29:27,103 [INFO] - Calling Macquarie_ov
+2023-06-15 12:29:31,534 [INFO] - Inside MACQUARIE_OV
+2023-06-15 12:29:38,044 [INFO] - Dataframe made from TC file
+2023-06-15 12:29:46,980 [INFO] - File loaded in workbook
+2023-06-15 12:30:16,553 [INFO] - data went for first sheet
+2023-06-15 12:45:34,570 [INFO] - process started
+2023-06-15 12:45:36,303 [INFO] - Calling Macquarie_ov
+2023-06-15 12:45:36,303 [INFO] - Inside MACQUARIE_OV
+2023-06-15 12:45:37,689 [INFO] - Dataframe made from TC file
+2023-06-15 12:45:40,168 [INFO] - File loaded in workbook
+2023-06-15 12:45:46,257 [INFO] - data went for first sheet
+2023-06-15 12:45:46,277 [INFO] - sheet activated for WC-431
+2023-06-15 12:45:46,917 [INFO] - sheet activated for Bulk-434
+2023-06-15 12:45:51,082 [INFO] - sheet activated for Power-437
+2023-06-15 12:45:51,869 [INFO] - sheet activated for Power-438
+2023-06-15 12:45:52,374 [INFO] - sheet activated for Center-442
+2023-06-15 12:45:52,900 [INFO] - sheet activated for Center-443
+2023-06-15 12:45:53,275 [INFO] - sheet activated for Center-444
+2023-06-15 12:45:53,935 [INFO] - Save changes to workbook
+2023-06-15 12:45:59,123 [INFO] - Closed workbook
+2023-06-15 12:45:59,125 [INFO] -  Engine Disposed ---- end
+2023-06-15 12:45:59,145 [INFO] - Snowflake Connector for Python Version: 2.7.9, Python Version: 3.8.5, Platform: Windows-10-10.0.19041-SP0
+2023-06-15 12:45:59,146 [INFO] - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+2023-06-15 12:45:59,146 [INFO] - Setting use_openssl_only mode to False
+2023-06-15 12:46:02,261 [INFO] - query: [SELECT 1]
+2023-06-15 12:46:02,564 [INFO] - query execution done
+2023-06-15 12:46:02,582 [INFO] - query: [select * from POWERDB.PLOG.BU_CONFIG_PARAMS where PROJECT_NAME = 'BU_ALERTS' and...]
+2023-06-15 12:46:02,870 [INFO] - query execution done
+2023-06-15 12:46:02,877 [INFO] - closed
+2023-06-15 12:46:03,125 [INFO] - No async queries seem to be running, deleting session
