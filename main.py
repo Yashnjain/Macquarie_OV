@@ -191,7 +191,7 @@ def MACQUARIE_OV(date,fname):
 def main():
     try:
         logging.info('process started')
-        date_day_before= datetime.now() - timedelta(1)
+        date_day_before= datetime.now() - timedelta(2)
         date_file = date_day_before.strftime("%m%d%Y")
         fname = date_day_before.strftime("%d%m") + 'F'
         log_json='[{"JOB_ID": "'+str(job_id)+'","CURRENT_DATETIME": "'+str(datetime.now())+'"}]'

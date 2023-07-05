@@ -1,0 +1,50 @@
+2023-06-29 14:07:14,385 [INFO] - process started
+2023-06-29 14:07:17,481 [INFO] - Calling Macquarie_ov
+2023-06-29 14:07:18,105 [INFO] - Inside MACQUARIE_OV
+2023-06-29 14:07:19,453 [INFO] - Dataframe made from TC file
+2023-06-29 14:07:26,512 [INFO] - File loaded in workbook
+2023-06-29 14:07:32,613 [INFO] - data went for first sheet
+2023-06-29 14:07:32,637 [INFO] - sheet activated for WC-431
+2023-06-29 14:07:32,969 [INFO] - sheet activated for Bulk-434
+2023-06-29 14:07:33,198 [INFO] - sheet activated for Power-435
+2023-06-29 14:07:34,334 [INFO] - sheet activated for Power-436
+2023-06-29 14:07:34,552 [INFO] - sheet activated for Power-437
+2023-06-29 14:07:36,614 [INFO] - sheet activated for Power-438
+2023-06-29 14:07:36,818 [INFO] - sheet activated for Center-442
+2023-06-29 14:07:37,141 [INFO] - sheet activated for Center-443
+2023-06-29 14:07:38,065 [INFO] - sheet activated for Center-444
+2023-06-29 14:07:38,278 [INFO] - sheet activated for Power-448
+2023-06-29 14:07:40,147 [INFO] - Save changes to workbook
+2023-06-29 20:10:17,489 [INFO] - process started
+2023-06-29 20:10:19,370 [INFO] - Calling Macquarie_ov
+2023-06-29 20:10:21,490 [INFO] - Inside MACQUARIE_OV
+2023-06-29 20:10:22,788 [INFO] - Dataframe made from TC file
+2023-06-29 20:10:22,857 [INFO] - File loaded in workbook
+2023-06-29 20:10:45,471 [INFO] - process started
+2023-06-29 20:10:47,441 [INFO] - Calling Macquarie_ov
+2023-06-29 20:10:53,654 [INFO] - Inside MACQUARIE_OV
+2023-06-29 20:10:54,952 [INFO] - Dataframe made from TC file
+2023-06-29 20:10:56,284 [INFO] - File loaded in workbook
+2023-06-29 20:11:02,366 [INFO] - data went for first sheet
+2023-06-29 20:11:02,386 [INFO] - sheet activated for WC-431
+2023-06-29 20:11:02,764 [INFO] - sheet activated for Bulk-434
+2023-06-29 20:11:03,080 [INFO] - sheet activated for Power-435
+2023-06-29 20:11:04,045 [INFO] - sheet activated for Power-436
+2023-06-29 20:11:04,324 [INFO] - sheet activated for Power-437
+2023-06-29 20:11:06,402 [INFO] - sheet activated for Power-438
+2023-06-29 20:11:06,656 [INFO] - sheet activated for Center-442
+2023-06-29 20:11:07,004 [INFO] - sheet activated for Center-443
+2023-06-29 20:11:08,394 [INFO] - sheet activated for Center-444
+2023-06-29 20:11:08,643 [INFO] - sheet activated for Power-448
+2023-06-29 20:11:10,593 [INFO] - Save changes to workbook
+2023-06-29 20:11:13,728 [INFO] - Closed workbook
+2023-06-29 20:11:13,729 [INFO] -  Engine Disposed ---- end
+2023-06-29 20:11:13,736 [INFO] - Snowflake Connector for Python Version: 2.7.9, Python Version: 3.8.5, Platform: Windows-10-10.0.19041-SP0
+2023-06-29 20:11:13,737 [INFO] - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+2023-06-29 20:11:13,737 [INFO] - Setting use_openssl_only mode to False
+2023-06-29 20:11:17,264 [INFO] - query: [SELECT 1]
+2023-06-29 20:11:17,544 [INFO] - query execution done
+2023-06-29 20:11:17,546 [INFO] - query: [select * from POWERDB.PLOG.BU_CONFIG_PARAMS where PROJECT_NAME = 'BU_ALERTS' and...]
+2023-06-29 20:11:17,823 [INFO] - query execution done
+2023-06-29 20:11:17,825 [INFO] - closed
+2023-06-29 20:11:18,060 [INFO] - No async queries seem to be running, deleting session
