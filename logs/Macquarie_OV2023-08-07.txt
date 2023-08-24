@@ -1,0 +1,74 @@
+2023-08-07 15:53:51,506 [INFO] - process started
+2023-08-07 15:53:53,181 [INFO] - Calling Macquarie_ov
+2023-08-07 15:53:58,615 [INFO] - Inside MACQUARIE_OV
+2023-08-07 15:54:00,330 [INFO] - Dataframe made from TC file
+2023-08-07 15:54:02,604 [INFO] -  New month : Folder not found making new Folder
+2023-08-07 15:54:06,704 [INFO] -  New month : File not found making new File
+2023-08-07 15:59:58,187 [INFO] - Save changes to workbook
+2023-08-07 16:00:04,097 [INFO] - File loaded in workbook
+2023-08-07 16:01:45,353 [INFO] - data went for first sheet
+2023-08-07 16:09:17,976 [INFO] - process started
+2023-08-07 16:09:20,466 [INFO] - Calling Macquarie_ov
+2023-08-07 16:09:21,503 [INFO] - Inside MACQUARIE_OV
+2023-08-07 16:09:23,060 [INFO] - Dataframe made from TC file
+2023-08-07 16:09:30,997 [INFO] - File loaded in workbook
+2023-08-07 16:09:42,405 [INFO] - data went for first sheet
+2023-08-07 16:09:42,432 [INFO] - data went for first sheet
+2023-08-07 16:09:42,453 [INFO] - data went for first sheet
+2023-08-07 16:09:42,471 [INFO] - data went for first sheet
+2023-08-07 16:09:42,489 [INFO] - data went for first sheet
+2023-08-07 16:09:42,508 [INFO] - data went for first sheet
+2023-08-07 16:09:42,529 [INFO] - sheet activated for Bulk-434
+2023-08-07 16:09:42,889 [INFO] - sheet activated for Power-435
+2023-08-07 16:09:43,832 [INFO] - sheet activated for Power-436
+2023-08-07 16:09:44,120 [INFO] - sheet activated for Power-437
+2023-08-07 16:09:44,395 [INFO] - sheet activated for Spread-440
+2023-08-07 16:09:44,922 [INFO] - sheet activated for Center-442
+2023-08-07 16:09:45,171 [INFO] - sheet activated for Center-443
+2023-08-07 16:09:48,035 [INFO] - sheet activated for Center-444
+2023-08-07 16:09:50,336 [INFO] - Save changes to workbook
+2023-08-07 16:09:53,169 [INFO] - Closed workbook
+2023-08-07 16:10:47,981 [INFO] - process started
+2023-08-07 16:10:49,530 [INFO] - Calling Macquarie_ov
+2023-08-07 16:10:50,633 [INFO] - Inside MACQUARIE_OV
+2023-08-07 16:10:52,329 [INFO] - Dataframe made from TC file
+2023-08-07 16:10:58,604 [INFO] - File loaded in workbook
+2023-08-07 16:11:04,690 [INFO] - data went for first sheet
+2023-08-07 16:11:04,770 [INFO] - sheet activated for WC-431
+2023-08-07 16:11:09,272 [INFO] - sheet activated for Bulk-434
+2023-08-07 16:11:10,261 [INFO] - sheet activated for Power-436
+2023-08-07 16:11:11,941 [INFO] - sheet activated for Power-437
+2023-08-07 16:11:12,207 [INFO] - sheet activated for Center-442
+2023-08-07 16:11:12,647 [INFO] - sheet activated for Center-443
+2023-08-07 16:11:13,891 [INFO] - sheet activated for Center-444
+2023-08-07 16:11:14,057 [INFO] - sheet activated for Power-448
+2023-08-07 16:11:16,179 [INFO] - Save changes to workbook
+2023-08-07 16:11:39,906 [INFO] - process started
+2023-08-07 16:11:41,628 [INFO] - Calling Macquarie_ov
+2023-08-07 16:11:43,753 [INFO] - Inside MACQUARIE_OV
+2023-08-07 16:11:45,174 [INFO] - Dataframe made from TC file
+2023-08-07 16:11:58,710 [INFO] - File loaded in workbook
+2023-08-07 16:12:04,879 [INFO] - data went for first sheet
+2023-08-07 16:12:04,908 [INFO] - sheet activated for WC-431
+2023-08-07 16:12:05,157 [INFO] - sheet activated for Bulk-434
+2023-08-07 16:12:13,909 [INFO] - sheet activated for Power-436
+2023-08-07 16:12:15,131 [INFO] - sheet activated for Power-438
+2023-08-07 16:12:15,949 [INFO] - sheet activated for Spread-440
+2023-08-07 16:12:16,544 [INFO] - sheet activated for Center-442
+2023-08-07 16:12:17,049 [INFO] - sheet activated for Center-443
+2023-08-07 16:12:20,895 [INFO] - sheet activated for Center-444
+2023-08-07 16:12:21,085 [INFO] - sheet activated for Power-445
+2023-08-07 16:12:23,598 [INFO] - Save changes to workbook
+2023-08-07 16:12:55,821 [INFO] - process started
+2023-08-07 16:12:58,151 [INFO] - Calling Macquarie_ov
+2023-08-07 16:12:59,362 [INFO] - Inside MACQUARIE_OV
+2023-08-07 16:13:00,777 [INFO] - Dataframe made from TC file
+2023-08-07 16:13:06,878 [INFO] - File loaded in workbook
+2023-08-07 16:13:12,967 [INFO] - data went for first sheet
+2023-08-07 16:13:13,057 [INFO] - sheet activated for Bulk-434
+2023-08-07 16:13:14,545 [INFO] - sheet activated for Power-435
+2023-08-07 16:13:15,822 [INFO] - sheet activated for Power-436
+2023-08-07 16:13:16,713 [INFO] - sheet activated for Center-442
+2023-08-07 16:13:17,026 [INFO] - sheet activated for Center-443
+2023-08-07 16:13:20,239 [INFO] - sheet activated for Center-444
+2023-08-07 16:13:22,303 [INFO] - Save changes to workbook

@@ -1,0 +1,25 @@
+2023-08-24 14:31:50,712 [INFO] - process started
+2023-08-24 14:31:55,026 [INFO] - Calling Macquarie_ov
+2023-08-24 14:31:56,598 [INFO] - Inside MACQUARIE_OV
+2023-08-24 14:32:02,592 [INFO] - Dataframe made from TC file
+2023-08-24 14:32:19,004 [INFO] - File loaded in workbook
+2023-08-24 14:32:45,923 [INFO] - data went for first sheet
+2023-08-24 14:33:17,686 [INFO] - sheet activated for Power-432
+2023-08-24 14:33:26,755 [INFO] - sheet activated for Bulk-434
+2023-08-24 14:37:33,894 [INFO] - sheet activated for Power-436
+2023-08-24 14:37:39,249 [INFO] - sheet activated for Spread-440
+2023-08-24 14:37:49,237 [INFO] - sheet activated for Center-442
+2023-08-24 14:37:52,297 [INFO] - sheet activated for Center-444
+2023-08-24 14:38:00,349 [INFO] - sheet activated for Power-448
+2023-08-24 14:38:01,508 [INFO] - Save changes to workbook
+2023-08-24 14:38:03,923 [INFO] - Closed workbook
+2023-08-24 14:38:03,925 [INFO] -  Engine Disposed ---- end
+2023-08-24 14:38:03,934 [INFO] - Snowflake Connector for Python Version: 2.7.9, Python Version: 3.8.5, Platform: Windows-10-10.0.19041-SP0
+2023-08-24 14:38:03,935 [INFO] - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+2023-08-24 14:38:03,935 [INFO] - Setting use_openssl_only mode to False
+2023-08-24 14:38:07,619 [INFO] - query: [SELECT 1]
+2023-08-24 14:38:07,967 [INFO] - query execution done
+2023-08-24 14:38:07,967 [INFO] - query: [select * from POWERDB.PLOG.BU_CONFIG_PARAMS where PROJECT_NAME = 'BU_ALERTS' and...]
+2023-08-24 14:38:08,321 [INFO] - query execution done
+2023-08-24 14:38:08,321 [INFO] - closed
+2023-08-24 14:38:08,627 [INFO] - No async queries seem to be running, deleting session
