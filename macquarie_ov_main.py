@@ -12,14 +12,18 @@ import pandas as pd
 import xlwings as xw
 from datetime import datetime, timedelta
 
+def convert_date(x):
+    if pd.notna(x):  # Check if x is not NaN (NaT)
+        x = x.strip()
+        if x:
+            return datetime.strptime(x, "%d/%m/%y")
+    return None
 
-def MACQUARIE_OV(date,fname):
+
+def MACQUARIE_OV(fname,date):
     try:
         logging.info('Inside MACQUARIE_OV')
-        loc = f'S:\Position Report\MBL Statement Recon\Source\{date}\{fname}'
-        # loc = root_loc+r"\\{date}\\{fname}"
-        # fname="0307F"
-        # loc = os.getcwd()+r"\\202307\\0307F"
+        loc = os.path.join(root_loc, date, fname)
         df = pd.read_csv(os.path.join(loc, 'TC'+fname+'.csv'))
         dic = {'52311430': 'sheet1', '52311431': [34, 'WC-431'], '52311432': [23, 'Power-432'], '52311433': [18, 'Power-433'], '52311434': [35, 'Bulk-434'], '52311435': [14, 'Power-435'],
             '52311436': [30, 'Power-436'], '52311437': [14, 'Power-437'], '52311438': [14, 'Power-438'], '52311439': [15, 'Spread-439'], '52311440': [42, 'Spread-440'], '52311441': [16, 'NG-441'],
@@ -37,7 +41,7 @@ def MACQUARIE_OV(date,fname):
             os.makedirs(folder_name)
         if not os.path.exists(filename):
             logging.info(' New month : File not found making new File')
-            yesterday = datetime.now()-timedelta(days=1)
+            yesterday = datetime.now()-timedelta(days=2)
             year = yesterday.strftime("%Y")
             month = yesterday.strftime("%m")
             days_in_month = str(calendar.monthrange(int(year), int(month))[1])
@@ -94,7 +98,7 @@ def MACQUARIE_OV(date,fname):
                     next_month_date = first_day_next_month.strftime("%m-%d-%Y")
                     sheet.range(f"A{last_row}").value = next_month_date
                 continue
-            wb.save(save_loc)
+            wb.save()
             logging.info('Save changes to workbook')
             wb.close()
         wb = xw.Book(filename)
@@ -119,6 +123,7 @@ def MACQUARIE_OV(date,fname):
                 clr_comm = val['Clearing Commission Amount']
                 NFA_Fees = val['EFP Amount']
                 desc = val['Description']
+                val['Exercise Date'] = val['Exercise Date'].apply(convert_date)
                 if key == '52311430':
                     sheet = wb.sheets["Margin-430"]
                     last_row = sheet.range(
@@ -165,6 +170,7 @@ def MACQUARIE_OV(date,fname):
                         NFA_Fees_val = float(
                             NFA_Fees[i]) if NFA_Fees[i] else 0.0
                         total_fee = exec_comm_val + fees_val + clr_comm_val + NFA_Fees_val
+                        pre_exercise_date = val['Exercise Date'][i].strftime("%b %y") if not pd.isnull(val['Exercise Date'][i]) else ""
                         try:
                             # one line space between final month entrty and current entry
                             last_row = sheet.range(
@@ -193,7 +199,7 @@ def MACQUARIE_OV(date,fname):
                                 sheet.range(f"I{last_row+1}").value = amount[i]
 
                             elif (bought_quantity[i] == ''):
-                                sheet.range(f"K{last_row+1}").value = desc[i]
+                                sheet.range(f"K{last_row+1}").value = pre_exercise_date + " " + desc[i]
                                 sheet.range(
                                     f"L{last_row+1}").value = '-' + sold_quantity[i]
                                 sheet.range(
@@ -203,7 +209,7 @@ def MACQUARIE_OV(date,fname):
                                 sheet.range(
                                     f"AB{last_row+1}").formula = f'=AB{last_row-1}+I{last_row}+N{last_row}+W{last_row}+Y{last_row}'
                             else:
-                                sheet.range(f"F{last_row+1}").value = desc[i]
+                                sheet.range(f"F{last_row+1}").value = pre_exercise_date + " " + desc[i]
                                 sheet.range(
                                     f"G{last_row+1}").value = bought_quantity[i]
                                 sheet.range(
@@ -213,7 +219,7 @@ def MACQUARIE_OV(date,fname):
                                 sheet.range(
                                     f"AB{last_row+1}").formula = f'=AB{last_row-1}+I{last_row}+N{last_row}+W{last_row}+Y{last_row}'
                         continue
-        wb.save(save_loc)
+        wb.save()
         logging.info('Save changes to workbook')
         wb.close()
         logging.info('Closed workbook')
@@ -248,20 +254,19 @@ if __name__ == '__main__':
         receiver_email = credential_dict['EMAIL_LIST']
 
         ################# Uncomment for Testing####################
-        job_name = "MACQUARIE OTHER_VERTICAL"
-        job_name = "BIO_PAD01_"+ job_name
-        database = "BUITDB_DEV"
-        warehouse = "BUIT_WH"
-        owner="Pakhi"
-        receiver_email = "amanullah.khan@biourja.com,yashn.jain@biourja.com,imam.khan@biourja.com,deep.durugkar@biourja.com,yash.gupta@biourja.com,bhavana.kaurav@biourja.com"
-        inputloc = r'\\BIO-INDIA-FS\India Sync$\India\Macquarie\2023'
-        root_loc= r"\\biourja.local\\biourja\\Data\\Position Report\\MBL Statement Recon\\Source"
-        # inputloc = r'E\testingEnvironment\J_local_drive\India\Macquarie\2023'
-        # root_loc= r"E:\\testingEnvironment\\S_local_drive\\Position Report\\MBL Statement Recon\\Source"
-        save_loc = os.getcwd() + '\\save'
+        # job_name = "MACQUARIE OTHER_VERTICAL"
+        # job_name = "BIO_PAD01_"+ job_name
+        # database = "BUITDB_DEV"
+        # warehouse = "BUIT_WH"
+        # owner="Pakhi"
+        # receiver_email = "amanullah.khan@biourja.com,yashn.jain@biourja.com,imam.khan@biourja.com,deep.durugkar@biourja.com,yash.gupta@biourja.com,bhavana.kaurav@biourja.com"
+        #inputloc = r'\\BIO-INDIA-FS\India Sync$\India\Macquarie\2023'
+        #root_loc= r"\\biourja.local\\biourja\\Data\\Position Report\\MBL Statement Recon\\Source"
+        #inputloc = r'E:\testingEnvironment\I_local_drive\India Sync$\India\Macquarie\2023'
+        #root_loc= r"E:\testingEnvironment\S_local_drive\Position Report\MBL Statement Recon\Source"
         ###########################################################
-        # date = datetime.now()
-        date_day_before = datetime.now() - timedelta(2)
+        
+        date_day_before = datetime.now() - timedelta(1)
         date_file = date_day_before.strftime("%m%d%Y")
         fname = date_day_before.strftime("%d%m") + 'F'
         
@@ -271,7 +276,7 @@ if __name__ == '__main__':
                     process_owner=owner, row_count=0, log=log_json, database=database, warehouse=warehouse)
         
         logging.info('Calling Macquarie_ov')
-        MACQUARIE_OV(date_file,fname)
+        MACQUARIE_OV(fname,date_file)
         logging.info('Engine Disposed ---- end')
         
         # BU_LOG entry(completed) in PROCESS_LOG table
