@@ -1,9 +1,0 @@
-2023-05-24 14:30:38,076 [INFO] - process started
-2023-05-24 14:30:40,154 [INFO] - Calling Macquarie_ov
-2023-05-24 14:30:41,816 [INFO] - Inside MACQUARIE_OV_MONTHEND
-2023-05-24 18:12:46,940 [INFO] - process started
-2023-05-24 18:12:48,122 [INFO] - Calling Macquarie_ov
-2023-05-24 18:12:49,391 [INFO] - Inside MACQUARIE_OV_MONTHEND
-2023-05-24 18:57:33,985 [INFO] - process started
-2023-05-24 18:57:33,986 [INFO] - Calling Macquarie_ov
-2023-05-24 18:57:34,823 [INFO] - Inside MACQUARIE_OV_MONTHEND

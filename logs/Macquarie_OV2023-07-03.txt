@@ -1,6 +1,0 @@
-2023-07-03 13:37:28,180 [INFO] - process started
-2023-07-03 13:37:31,430 [INFO] - Calling Macquarie_ov
-2023-07-03 13:37:32,499 [INFO] - Inside MACQUARIE_OV
-2023-07-03 13:37:46,196 [INFO] - process started
-2023-07-03 13:37:48,303 [INFO] - Calling Macquarie_ov
-2023-07-03 13:37:50,386 [INFO] - Inside MACQUARIE_OV

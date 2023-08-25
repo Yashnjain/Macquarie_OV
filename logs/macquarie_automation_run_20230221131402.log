@@ -1,3 +1,0 @@
-{"timestamp": "2023-02-21T07:44:02.771014Z", "level": "INFO", "name": "root", "lineno": 60, "message": "Execution Started"}
-{"timestamp": "2023-02-21T07:44:02.771999Z", "level": "WARNING", "name": "root", "lineno": 63, "message": "Start work at 1676965442.7719991 ..."}
-{"timestamp": "2023-02-21T07:47:49.577661Z", "level": "WARNING", "name": "root", "lineno": 67, "message": "It took 226.80456042289734 seconds to run."}
