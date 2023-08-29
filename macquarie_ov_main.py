@@ -27,7 +27,8 @@ def MACQUARIE_OV(fname,date):
         df = pd.read_csv(os.path.join(loc, 'TC'+fname+'.csv'))
         dic = {'52311430': 'sheet1', '52311431': [34, 'WC-431'], '52311432': [23, 'Power-432'], '52311433': [18, 'Power-433'], '52311434': [35, 'Bulk-434'], '52311435': [14, 'Power-435'],
             '52311436': [30, 'Power-436'], '52311437': [14, 'Power-437'], '52311438': [14, 'Power-438'], '52311439': [15, 'Spread-439'], '52311440': [42, 'Spread-440'], '52311441': [16, 'NG-441'],
-            '52311442': [27, 'Center-442'], '52311443': [20, 'Center-443'], '52311444': [24, 'Center-444'], '52311445': [57, 'Power-445'], '52311446': [33, 'Power-446'], '52311448': [33, 'Power-448']}
+            '52311442': [27, 'Center-442'], '52311443': [20, 'Center-443'], '52311444': [24, 'Center-444'], '52311445': [57, 'Power-445'], '52311446': [33, 'Power-446'],'52311447' : [33, 'Power-447'], 
+            '52311448': [33, 'Power-448']}
         logging.info('Dataframe made from TC file')
         daybefore = datetime.now() - timedelta(days=1)
         year = daybefore.year
@@ -227,6 +228,10 @@ def MACQUARIE_OV(fname,date):
     except Exception as ex:
         logging.exception(f'Exception caught in MACQUARIE_OV() method : {ex}')
         print(f'Exception caught in MACQUARIE_OV() method : {ex}')
+        wb.save()
+        logging.info('Save changes to workbook')
+        wb.close()
+        logging.info('Closed workbook')
         raise ex
 
 
