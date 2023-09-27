@@ -220,6 +220,7 @@ def MACQUARIE_OV(fname,date):
                                 sheet.range(
                                     f"AB{last_row+1}").formula = f'=AB{last_row-1}+I{last_row}+N{last_row}+W{last_row}+Y{last_row}'
                         continue
+                    
         wb.save()
         logging.info('Save changes to workbook')
         wb.app.quit()
