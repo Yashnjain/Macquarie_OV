@@ -233,7 +233,15 @@ def MACQUARIE_OV(fname,date):
         wb.close()
         logging.info('Closed workbook')
         raise ex
-
+    finally:
+        try:
+            wb.app.quit()
+        except:
+            try:
+                wb.app.quit()
+            except:
+                wb.close()
+        
 
 if __name__ == '__main__':
     try:
