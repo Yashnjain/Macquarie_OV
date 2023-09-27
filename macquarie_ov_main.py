@@ -267,8 +267,8 @@ if __name__ == '__main__':
         receiver_email = credential_dict['EMAIL_LIST']
 
         ################# Uncomment for Testing####################
-        # job_name = "MACQUARIE OTHER_VERTICAL"
-        # job_name = "BIO_PAD01_"+ job_name
+        job_name = "MACQUARIE OTHER_VERTICAL"
+        job_name = "BIO_PAD01_"+ job_name
         # database = "BUITDB_DEV"
         # warehouse = "BUIT_WH"
         # owner="Pakhi"
