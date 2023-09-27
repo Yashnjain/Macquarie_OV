@@ -222,7 +222,7 @@ def MACQUARIE_OV(fname,date):
                         continue
         wb.save()
         logging.info('Save changes to workbook')
-        wb.close()
+        wb.app.quit()
         logging.info('Closed workbook')
 
     except Exception as ex:
@@ -230,7 +230,7 @@ def MACQUARIE_OV(fname,date):
         print(f'Exception caught in MACQUARIE_OV() method : {ex}')
         wb.save()
         logging.info('Save changes to workbook')
-        wb.close()
+        wb.app.quit()
         logging.info('Closed workbook')
         raise ex
     finally:
@@ -238,9 +238,9 @@ def MACQUARIE_OV(fname,date):
             wb.app.quit()
         except:
             try:
-                wb.app.quit()
-            except:
                 wb.close()
+            except:
+                pass
         
 
 if __name__ == '__main__':
@@ -289,6 +289,7 @@ if __name__ == '__main__':
                     process_owner=owner, row_count=0, log=log_json, database=database, warehouse=warehouse)
         
         logging.info('Calling Macquarie_ov')
+
         MACQUARIE_OV(fname,date_file)
         logging.info('Engine Disposed ---- end')
         
