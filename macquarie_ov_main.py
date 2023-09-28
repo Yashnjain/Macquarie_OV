@@ -229,10 +229,13 @@ def MACQUARIE_OV(fname,date):
     except Exception as ex:
         logging.exception(f'Exception caught in MACQUARIE_OV() method : {ex}')
         print(f'Exception caught in MACQUARIE_OV() method : {ex}')
-        wb.save()
-        logging.info('Save changes to workbook')
-        wb.app.quit()
-        logging.info('Closed workbook')
+        try:
+            wb.save()
+        except:
+            pass
+        # logging.info('Save changes to workbook')
+        # wb.app.quit()
+        # logging.info('Closed workbook')
         raise ex
     finally:
         try:
