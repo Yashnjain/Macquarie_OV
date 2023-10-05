@@ -30,7 +30,7 @@ def MACQUARIE_OV(fname,date):
             '52311442': [27, 'Center-442'], '52311443': [20, 'Center-443'], '52311444': [24, 'Center-444'], '52311445': [57, 'Power-445'], '52311446': [33, 'Power-446'],'52311447' : [33, 'Power-447'], 
             '52311448': [33, 'Power-448']}
         logging.info('Dataframe made from TC file')
-        daybefore = datetime.now() - timedelta(days=1)
+        daybefore = datetime.now() - timedelta(days=1)#Change 1 for manual run
         year = daybefore.year
         month = daybefore.month
         days_in_month = str(calendar.monthrange(int(year), int(month))[1])
@@ -74,10 +74,10 @@ def MACQUARIE_OV(fname,date):
                     sheet.range(f"A{last_row}").value = next_month_date
                 else:
                     sheet = wb.sheets[value[1]]
+                    print(value[1])
                     sheet.activate()
                     try:
-                        last_row = sheet.range(
-                            'A' + str(sheet.cells.last_cell.row)).end('up').row
+                        last_row = sheet.range('A' + str(sheet.cells.last_cell.row)).end('up').row
                         sec_last_row = sheet.range(
                             'A' + str(sheet.cells.last_cell.row)).end('up').end('up').end('up').end('up').row
                         lines_to_copy = sheet.range(
@@ -180,9 +180,15 @@ def MACQUARIE_OV(fname,date):
                             pre_month = pre_date.strftime("%m")
                             curr_month = daybefore.strftime("%m")
                         except AttributeError:
-                            last_row = sheet.range('A' + str(sheet.cells.last_cell.row)).end(
-                                'up').end('up').end('up').end('up').end('up').end('up').row
-                            pre_date = sheet.range('A' + str(last_row)).value
+                            # last_row = sheet.range('A' + str(sheet.cells.last_cell.row)).end(
+                            #     'up').end('up').end('up').end('up').end('up').end('up').row
+                            last_row = sheet.range('A' + str(sheet.cells.last_cell.row)).end('up').row
+                            a_list = sheet.range(f'A1:A{last_row}').value
+                            pre_date_index = sheet.range(f'A1:A{last_row}').value.index(datetime.strptime(datetime.strftime(date_day_before,"%m/%#d/%Y"),"%m/%d/%Y").
+                                                                                        replace(day=1))+1
+                            last_row=pre_date_index
+                            pre_date = sheet.range('A' + str(pre_date_index)).value
+                            # pre_date = sheet.range('A' + str(last_row)).value
                             pre_month = pre_date.strftime("%m")
                             curr_month = daybefore.strftime("%m")
                         if (pre_month == curr_month):
@@ -283,7 +289,7 @@ if __name__ == '__main__':
         #root_loc= r"E:\testingEnvironment\S_local_drive\Position Report\MBL Statement Recon\Source"
         ###########################################################
         
-        date_day_before = datetime.now() - timedelta(1)
+        date_day_before = datetime.now() - timedelta(days=1) #Change 1 for manual run
         date_file = date_day_before.strftime("%m%d%Y")
         fname = date_day_before.strftime("%d%m") + 'F'
         
