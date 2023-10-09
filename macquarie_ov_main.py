@@ -174,11 +174,21 @@ def MACQUARIE_OV(fname,date):
                         pre_exercise_date = val['Exercise Date'][i].strftime("%b %y") if not pd.isnull(val['Exercise Date'][i]) else ""
                         try:
                             # one line space between final month entrty and current entry
-                            last_row = sheet.range(
-                                'A' + str(sheet.cells.last_cell.row)).end('up').end('up').end('up').end('up').row
-                            pre_date = sheet.range('A' + str(last_row)).value
+                            # last_row = sheet.range(
+                            #     'A' + str(sheet.cells.last_cell.row)).end('up').end('up').end('up').end('up').row
+                            last_row = sheet.range('A' + str(sheet.cells.last_cell.row)).end('up').row
+                            a_list = sheet.range(f'A1:A{last_row}').value
+                            #Get Indx of current month first day
+                            pre_date_index = sheet.range(f'A1:A{last_row}').value.index(datetime.strptime(datetime.strftime(date_day_before,"%m/%#d/%Y"),"%m/%d/%Y").replace(day=1))+1
+                            last_row = sheet.range('A' + str(pre_date_index)).end("down").row
+                            last_value = sheet.range(f'A{last_row}').value
+                            if last_value is not None and last_value.month == date_day_before.month:
+                                pre_date_index = last_row
+                            pre_date = sheet.range('A' + str(pre_date_index)).value
+                            # pre_date = sheet.range('A' + str(last_row)).value
                             pre_month = pre_date.strftime("%m")
                             curr_month = daybefore.strftime("%m")
+                            last_row=pre_date_index
                         except AttributeError:
                             # last_row = sheet.range('A' + str(sheet.cells.last_cell.row)).end(
                             #     'up').end('up').end('up').end('up').end('up').end('up').row
