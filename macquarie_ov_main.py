@@ -180,6 +180,7 @@ def MACQUARIE_OV(fname,date):
                             a_list = sheet.range(f'A1:A{last_row}').value
                             #Get Indx of current month first day
                             pre_date_index = sheet.range(f'A1:A{last_row}').value.index(datetime.strptime(datetime.strftime(date_day_before,"%m/%#d/%Y"),"%m/%d/%Y").replace(day=1))+1
+                            # pre_date_index = sheet.range(f'A1:A{last_row}').value.index(datetime.strptime(datetime.strftime(date_day_before,"%m/%d/%Y"),"%m/%d/%Y").replace(day=1))+1
                             last_row = sheet.range('A' + str(pre_date_index)).end("down").row
                             last_value = sheet.range(f'A{last_row}').value
                             if last_value is not None and last_value.month == date_day_before.month:
@@ -189,7 +190,8 @@ def MACQUARIE_OV(fname,date):
                             pre_month = pre_date.strftime("%m")
                             curr_month = daybefore.strftime("%m")
                             last_row=pre_date_index
-                        except AttributeError:
+                        # except AttributeError:
+                        except:
                             # last_row = sheet.range('A' + str(sheet.cells.last_cell.row)).end(
                             #     'up').end('up').end('up').end('up').end('up').end('up').row
                             last_row = sheet.range('A' + str(sheet.cells.last_cell.row)).end('up').row
